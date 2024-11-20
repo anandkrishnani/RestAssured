@@ -7,7 +7,7 @@ import lombok.Setter;
 public class CreateProductResponse {
     private String productId;
     private String message;
-    private static CreateProductResponse instance;
+
 
 
 
