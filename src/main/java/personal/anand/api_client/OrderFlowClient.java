@@ -30,7 +30,7 @@ public class OrderFlowClient implements Keys {
 
     public void createProduct(HashMap< String,String> hashMap){
         createProductResponse = given().log().all().spec(authClient.getRequestSpecification()).header("Authorization", scenarioStorage.get(KEY_AUTH_TOKEN)).formParams(hashMap)
-                .multiPart("productImage", new File("//Users//anand.krishnani//Documents//download.jpeg"))
+                .multiPart("productImage", new File("src/test/resources/download.jpeg"))
                 .post("api/ecom/product/add-product").as(CreateProductResponse.class);
 
         scenarioStorage.put(KEY_CREATE_PRODUCT_MESSAGE, createProductResponse.getMessage());

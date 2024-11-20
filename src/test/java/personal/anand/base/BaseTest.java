@@ -13,7 +13,6 @@ import java.util.Properties;
 
 public class BaseTest {
 
-    protected Properties prop;
     protected ScenarioStorage scenarioStorage;
     protected AuthClient authClient;
     protected OrderFlowClient orderFlowClient;
